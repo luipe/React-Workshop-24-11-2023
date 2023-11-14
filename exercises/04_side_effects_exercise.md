@@ -25,6 +25,6 @@ async function fetchCatUrl(): Promise<string> {
   const rawResponse = await fetch(`${catProviderUrl}/cat?json=true`);
   const jsonResponse = await rawResponse.json();
   return catProviderUrl + jsonResponse.url;
-}
+};
 ```
 </details>

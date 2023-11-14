@@ -66,7 +66,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div>
       <h1>Number of clicks: {counter}</h1>
       <button onClick={handleClick}>Click</button>
       <button onClick={handleDoubleClick}>Double click</button>
@@ -75,7 +75,7 @@ function App() {
   );
 }
 ```
-You can try this out yourself in our CodeSandbox examples: 
+You can try this out yourself in our CodeSandbox examples:
 * [Example that doesn't work because it relies on the value of the state variable having been updated already](https://codesandbox.io/s/react-state-why-does-double-click-not-work-ou3hnl?file=/src/App.tsx)
 * [Fixed example that works because it passes an updater function to the setter function](https://codesandbox.io/s/react-state-double-click-fixed-vttbtf?file=/src/App.tsx)
 * [Working example from above with both ways of using the setter function - updater function and value not depending on current state](https://codesandbox.io/s/react-state-full-example-rbct6z?file=/src/App.tsx)
@@ -107,7 +107,7 @@ export default function App() {
   }
 
   return (
-    <div className="App">
+    <div>
       <ClickDisplay numberOfClicks={counter} />
       <ClickButton handleClick={handleClick} />
     </div>

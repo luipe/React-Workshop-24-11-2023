@@ -35,7 +35,7 @@ function CursorCat() {
     }
   })
 
-  return !position ? null : <CatSvg x={position.x} y={position.y}/>;
+  return position ? <CatSvg x={position.x} y={position.y} /> : null;
 }
 ```
 
@@ -70,7 +70,7 @@ function HelloWorld() {
       <p>Click count: {count}</p>
     </div>
   );
-}
+};
 ```
 
 [CodeSandbox example](https://codesandbox.io/s/confident-currying-3vyzp1?file=/src/App.tsx)
@@ -95,22 +95,22 @@ function TodaysBeer() {
       );
       const parsedResponse = (await response.json()) as Beer;
       setBeer(parsedResponse);
-    }
-
+    };
+    
     fetchBeer();
   }, []);
 
   return (
     <div>
       <h1>Today's beer </h1>
-      {!beer
-        ? null
-        : Object.entries(beer).map(([key, val]) => (
-          <div>
-            <b>{key}: </b>
-            <span>{val}</span>
-          </div>
-        ))}
+      {beer
+        ? Object.entries(beer).map(([key, val]) => (
+            <div>
+              <b>{key}: </b>
+              <span>{val}</span>
+            </div>
+          ))
+        : null}
     </div>
   );
 }
@@ -161,7 +161,7 @@ function TodaysBeer() {
 
 [CodeSandbox example](https://codesandbox.io/s/quizzical-tree-ueyvzm?file=/src/DemoComponent.tsx)
 
-----
+---
 
 ## Rules of Hooks
 

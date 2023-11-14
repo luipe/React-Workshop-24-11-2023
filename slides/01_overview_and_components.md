@@ -85,12 +85,6 @@ ReactDOM.render(<HelloWorld />, document.getElementById('root'));
 </figure>
 
 
-## **Exercise 1**: Create Code Sandbox
-
-(see exercise slide)
-
-----
-
 ## What files do you see?
 
 **public**
@@ -145,7 +139,7 @@ ReactDOM.render(<HelloWorld />, document.getElementById('root'));
 
 * Conditional and functional expressions (no if/else or for-loops)
 ```tsx
-    return <h1>Hello {name !== undefined ? <b>{name}</b> : <b>unknown</b>}!</h1>;
+    <h1>Hello {name !== undefined ? <b>{name}</b> : <b>unknown</b>}!</h1>
 ```
 
 * Another example: Flip a coin
@@ -166,6 +160,6 @@ Include in the main application:
 ----
 
 To remember:
-* Everything before the `return` is Typescript
+* Everything before the `return` is TypeScript
 * Inside the `return`, it's HTML-like syntax
-* Use braces `{}` to include Typescript inside the HTML-like part
+* Use braces `{}` to include TypeScript expressions inside the HTML-like part
