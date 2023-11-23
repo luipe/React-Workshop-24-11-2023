@@ -40,8 +40,7 @@ this workshop.
    import App from './App'
    
    const rootElement = document.getElementById("root") as HTMLElement;
-   
-   createRoot(rootElement).render(<App />)
+   createRoot(rootElement).render(<App />);
    ```
 
 5. Have a look at the generated files:

@@ -67,12 +67,12 @@ function HelloWorld() {
   return <h1>Hello World!</h1>;
 }
 ```
-as a so-called *functional component*
+is a so-called *functional component*
 
 
 ### Inclusion in DOM
 ```tsx
-ReactDOM.render(<HelloWorld />, document.getElementById('root'));
+createRoot(document.getElementById("root")).render(<App />);
 ```
 
 * element tagged as `root` in DOM (index.html)
@@ -87,17 +87,15 @@ ReactDOM.render(<HelloWorld />, document.getElementById('root'));
 
 ## What files do you see?
 
-**public**
-* **index.html** entry point of web page
-
 **src**
 * **App.tsx** The main React component
-* **index.tsx** inclusion of component in DOM
-* **styles.css** style sheet
+* **main.tsx** inclusion of component in DOM
+* **index.css** style sheet
 
 **root folder**
 * **package.json** dependencies to packages
 * **tsconfig.json** typescript configuration
+* **index.html** entry point of web page
 
 
 ----
